@@ -7,7 +7,7 @@ function App() {
     <>
       <h1>클래스형 컴포넌트</h1>
       <ClassComponent />
-      <FunctionComponent />
+      <FunctionComponent>여기에 children props가 들어갑니다</FunctionComponent>
     </>
   );
 }
