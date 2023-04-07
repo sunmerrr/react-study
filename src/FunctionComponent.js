@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // react v15.5부터 외부 라이브러리로 이동
 
 export const FunctionComponent = ({ name, children }) => {
   return (
@@ -10,3 +11,7 @@ export const FunctionComponent = ({ name, children }) => {
 };
 
 FunctionComponent.defaultProps = { name: 'react' };
+
+FunctionComponent.propTypes = {
+  name: PropTypes.string,
+};
