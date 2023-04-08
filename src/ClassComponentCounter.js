@@ -31,7 +31,14 @@ export class ClassComponentCounter extends Component {
           onClick={() => {
             // this.setState를 통해서 state값을 변경 가능
             // 인자로 전달된 객체 안에 들어있는 값만 바꿔 줌
-            this.setState({ number: number + 1 });
+            this.setState(
+              { number: number + 1 },
+              // setState의 두번째 파라미터로 콜백함수를 등록하여 setState작업이 끝난 후의 동작을 처리할 수 있음
+              () => {
+                console.log('이런식으로 setState 호출 이후 특정 작업 실행');
+                console.log(this.state);
+              },
+            );
           }}
         >
           +1
