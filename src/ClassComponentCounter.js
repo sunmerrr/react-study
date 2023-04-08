@@ -41,9 +41,7 @@ export class ClassComponentCounter extends Component {
         <button
           onClick={() => {
             // 객체 대신에 함수인자를 전달하여 클릭 이벤트를 설정할 수 있음
-            this.setState((prevState) => {
-              return { plusPrevNumber: prevState.plusPrevNumber + 1 };
-            });
+            this.setState((prevState) => ({ plusPrevNumber: prevState.plusPrevNumber + 1 }));
           }}
         >
           plus using previous number +1
