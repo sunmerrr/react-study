@@ -22,5 +22,6 @@ FunctionComponent.defaultProps = { name: 'React Function Component' };
 
 FunctionComponent.propTypes = {
   name: PropTypes.string,
+  unsetNumber: PropTypes.number.isRequired,
   favoriteNumber: PropTypes.number.isRequired, // 필수로 받아와야 하는 값으로 지정
 };

@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class ClassComponent extends Component {
+  static defaultProps = {
+    name: 'React Class Component',
+  };
+
+  static propTypes = {
+    name: PropTypes.string,
+    unsetNumber: PropTypes.number.isRequired,
+    favoriteNumber: PropTypes.number.isRequired,
+  };
+
   render() {
     const { name, unsetNumber, favoriteNumber, children } = this.props;
     return (
@@ -23,9 +33,10 @@ export class ClassComponent extends Component {
 
 export default ClassComponent;
 
-ClassComponent.defaultProps = { name: 'React Class Component' };
+// ClassComponent.defaultProps = { name: 'React Class Component' };
 
-ClassComponent.propTypes = {
-  name: PropTypes.string,
-  favoriteNumber: PropTypes.number.isRequired,
-};
+// ClassComponent.propTypes = {
+//   name: PropTypes.string,
+//   unsetNumber: PropTypes.number.isRequired,
+//   favoriteNumber: PropTypes.number.isRequired,
+// };
