@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class ClassComponent extends Component {
+  // class형 컴포넌트에서는 defaultProps와 propTypes를 클래스 내부에서 설정할 수도 있다.
   static defaultProps = {
     name: 'React Class Component',
   };
