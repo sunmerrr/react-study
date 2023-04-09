@@ -24,6 +24,7 @@ export class ClassComponentCounter extends Component {
     const { number, fixedNumber, plusPrevNumber } = this.state; // state는 this.state로 조회 가능
     return (
       <div>
+        <h1>Class Component Example</h1>
         <h1>{number}</h1>
         <h2>바뀌지 않는 값: {fixedNumber}</h2>
         <button
