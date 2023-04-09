@@ -2,7 +2,8 @@ import './App.css';
 import ClassComponent from './ClassComponent';
 import ClassComponentCounter from './ClassComponentCounter';
 import { FunctionComponent } from './FunctionComponent';
-import { FunctionComponentCouter } from './FunctionComponentCouter';
+import { FunctionComponentCouter } from './FunctionComponentCounter';
+import { FunctionComponentSayHi } from './FunctionComponentSayHi';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <FunctionComponent favoriteNumber={6}>***여기에 children props가 들어갑니다***</FunctionComponent>
       <ClassComponentCounter />
       <FunctionComponentCouter />
+      <FunctionComponentSayHi />
     </>
   );
 }
