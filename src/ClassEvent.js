@@ -4,6 +4,22 @@ export class ClassEvent extends Component {
   state = {
     message: '',
   };
+
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({ message: e.target.value });
+  }
+
+  handleClick() {
+    alert(this.state.message);
+    this.setState({ message: '' });
+  }
+
   render() {
     return (
       <div>
@@ -13,8 +29,12 @@ export class ClassEvent extends Component {
           name="message"
           placeholder="write something here"
           value={this.state.message}
-          onChange={(e) => this.setState({ message: e.target.value })}
+          onChange={this.handleChange}
         />
+        <button onClick={this.handleClick}>확인</button>
+        <br />
+        <br />
+        <br />
       </div>
     );
   }
