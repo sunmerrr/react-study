@@ -32,6 +32,9 @@ export const FunctionComponentSayHi = () => {
       <button style={{ color: 'black' }} onClick={() => setColor('black')}>
         black
       </button>
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
