@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 export class ClassEvent extends Component {
   state = {
     message: '',
+    userName: '',
   };
 
   // constructor(props) {
@@ -12,12 +13,12 @@ export class ClassEvent extends Component {
   // }
 
   handleChange = (e) => {
-    this.setState({ message: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleClick = () => {
-    alert(this.state.message);
-    this.setState({ message: '' });
+    alert('멧돼지: ' + this.state.message + ' 이름:' + this.state.userName);
+    this.setState({ message: '', userName: '' });
   };
 
   render() {
@@ -29,6 +30,13 @@ export class ClassEvent extends Component {
           name="message"
           placeholder="write something here"
           value={this.state.message}
+          onChange={this.handleChange}
+        />
+        <input
+          type="text"
+          name="userName"
+          placeholder="write your name here"
+          value={this.state.userName}
           onChange={this.handleChange}
         />
         <button onClick={this.handleClick}>확인</button>
