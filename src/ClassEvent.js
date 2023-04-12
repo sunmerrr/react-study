@@ -21,7 +21,7 @@ export class ClassEvent extends Component {
     this.setState({ message: '', userName: '' });
   };
 
-  handleKeyPress = (e) => {
+  handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       this.handleClick();
     }
@@ -37,7 +37,7 @@ export class ClassEvent extends Component {
           placeholder="write something here"
           value={this.state.message}
           onChange={this.handleChange}
-          onKeyPress={this.handleKeyPress}
+          onKeyDown={this.handleKeyDown}
         />
         <input
           type="text"
@@ -45,7 +45,7 @@ export class ClassEvent extends Component {
           placeholder="write your name here"
           value={this.state.userName}
           onChange={this.handleChange}
-          onKeyPress={this.handleKeyPress}
+          onKeyDown={this.handleKeyDown}
         />
         <button onClick={this.handleClick}>확인</button>
         <br />

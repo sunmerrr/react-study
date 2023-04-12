@@ -18,7 +18,7 @@ const FunctionEvent = () => {
     setForm({ message: '', userName: '' });
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       handleClick();
     }
@@ -33,7 +33,7 @@ const FunctionEvent = () => {
         placeholder="write down your name here"
         value={form.userName}
         onChange={handleChange}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyDown}
       />
       <input
         type="text"
@@ -41,7 +41,7 @@ const FunctionEvent = () => {
         placeholder="write something here"
         value={form.message}
         onChange={handleChange}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyDown}
       />
       <button onClick={handleClick}>확인</button>
       <br />
