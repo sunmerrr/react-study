@@ -1,8 +1,28 @@
 import { useState } from 'react';
 
 const FunctionEvent = () => {
-  const [message, setMessage] = useState('');
-  const [userName, setUserName] = useState('');
+  // const [message, setMessage] = useState('');
+  // const [userName, setUserName] = useState('');
+
+  const [form, setForm] = useState({
+    message: '',
+    userName: '',
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleClick = () => {
+    alert(form.userName + ': ' + form.message);
+    setForm({ message: '', userName: '' });
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleClick();
+    }
+  };
 
   return (
     <div>
@@ -11,28 +31,19 @@ const FunctionEvent = () => {
         type="text"
         name="userName"
         placeholder="write down your name here"
-        value={userName}
-        onChange={(e) => {
-          setUserName(e.target.value);
-        }}
+        value={form.userName}
+        onChange={handleChange}
+        onKeyPress={handleKeyPress}
       />
-      <iNput
+      <input
         type="text"
         name="message"
         placeholder="write something here"
-        value={message}
-        onChange={(e) => {
-          setMessage(e.target.value);
-        }}
+        value={form.message}
+        onChange={handleChange}
+        onKeyPress={handleKeyPress}
       />
-      <button
-        onClick={() => {
-          alert(userName + ': ' + message);
-          setMessage('');
-        }}
-      >
-        확인
-      </button>
+      <button onClick={handleClick}>확인</button>
       <br />
       <br />
       <br />
