@@ -11,7 +11,7 @@ export const FunctionComponentCouter = () => {
       <h1>{number}</h1>
       <h2>바뀌지 않는 값: {fixedNumber}</h2>
       <button onClick={() => setNumber(number + 1)}>+1</button>
-      <h1>{plusPrevNumber}</h1>
+      <h1>plusPrevNumber: {plusPrevNumber}</h1>
       <button
         onClick={() => {
           setPlusPrevNumber((prev) => prev + 1);

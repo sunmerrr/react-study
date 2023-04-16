@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 export class ClassComponentCounter extends Component {
   // // 컴포넌트에 state를 설정할때 constructor에 메서드를 작성하여 설정해야 함.
@@ -45,7 +45,7 @@ export class ClassComponentCounter extends Component {
           +1
         </button>
 
-        <h1>{plusPrevNumber}</h1>
+        <h1>plusPrevNumber: {plusPrevNumber}</h1>
         <button
           onClick={() => {
             // 객체 대신에 함수인자를 전달하여 클릭 이벤트를 설정할 수 있음

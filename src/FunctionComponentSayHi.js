@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const FunctionComponentSayHi = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('Hi There!');
   const [color, setColor] = useState('black');
 
   return (
@@ -10,7 +10,7 @@ export const FunctionComponentSayHi = () => {
       <h1 style={{ color }}>{message}</h1>
       <button
         onClick={() => {
-          setMessage('Hi there!');
+          setMessage('Hi There!');
         }}
       >
         입장
