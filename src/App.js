@@ -1,5 +1,5 @@
 import './App.css';
-import ClassComponent from './ClassComponent';
+import ClassComponent from './components/ClassComponent';
 import ClassComponentCounter from './ClassComponentCounter';
 import ClassEvent from './ClassEvent';
 import ClassRef from './ClassRef';
