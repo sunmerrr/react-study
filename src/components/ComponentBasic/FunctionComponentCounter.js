@@ -25,3 +25,5 @@ export const FunctionComponentCouter = () => {
     </div>
   );
 };
+
+export default FunctionComponentCouter;

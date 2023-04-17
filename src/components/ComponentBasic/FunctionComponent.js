@@ -25,3 +25,5 @@ FunctionComponent.propTypes = {
   unsetNumber: PropTypes.number.isRequired,
   favoriteNumber: PropTypes.number.isRequired, // 필수로 받아와야 하는 값으로 지정
 };
+
+export default FunctionComponent;

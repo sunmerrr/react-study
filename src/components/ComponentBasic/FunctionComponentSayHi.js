@@ -38,3 +38,5 @@ export const FunctionComponentSayHi = () => {
     </div>
   );
 };
+
+export default FunctionComponentSayHi;

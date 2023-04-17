@@ -1,12 +1,12 @@
 import './App.css';
-import ClassComponent from './components/ClassComponent';
-import ClassComponentCounter from './ClassComponentCounter';
-import ClassEvent from './ClassEvent';
-import ClassRef from './ClassRef';
-import { FunctionComponent } from './FunctionComponent';
-import { FunctionComponentCouter } from './FunctionComponentCounter';
-import { FunctionComponentSayHi } from './FunctionComponentSayHi';
-import FunctionEvent from './FunctionEvent';
+import ClassComponent from './components/ComponentBasic/ClassComponent';
+import ClassComponentCounter from './components/ComponentBasic/ClassComponentCounter';
+import ClassEvent from './components/Event/ClassEvent';
+import ClassRef from './components/Ref/ClassRef';
+import FunctionComponent from './components/ComponentBasic/FunctionComponent';
+import FunctionComponentCouter from './components/ComponentBasic/ClassComponentCounter';
+import FunctionComponentSayHi from './components/ComponentBasic/FunctionComponentSayHi';
+import FunctionEvent from './components/Event/FunctionEvent';
 
 function App() {
   return (
