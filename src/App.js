@@ -2,6 +2,7 @@ import './App.css';
 import ClassComponent from './ClassComponent';
 import ClassComponentCounter from './ClassComponentCounter';
 import ClassEvent from './ClassEvent';
+import ClassRef from './ClassRef';
 import { FunctionComponent } from './FunctionComponent';
 import { FunctionComponentCouter } from './FunctionComponentCounter';
 import { FunctionComponentSayHi } from './FunctionComponentSayHi';
@@ -10,6 +11,10 @@ import FunctionEvent from './FunctionEvent';
 function App() {
   return (
     <div className="App">
+      <h1>Ref</h1>
+      <ClassRef />
+
+      <hr />
       <h1>이벤트 핸들링</h1>
       <ClassEvent />
       <FunctionEvent />
