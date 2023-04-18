@@ -7,12 +7,14 @@ import FunctionComponent from './components/ComponentBasic/FunctionComponent';
 import FunctionComponentCouter from './components/ComponentBasic/ClassComponentCounter';
 import FunctionComponentSayHi from './components/ComponentBasic/FunctionComponentSayHi';
 import FunctionEvent from './components/Event/FunctionEvent';
+import FunctionRef from './components/Ref/FunctionRef';
 
 function App() {
   return (
     <div className="App">
       <h1>Ref</h1>
       <ClassRef />
+      <FunctionRef />
 
       <hr />
       <h1>이벤트 핸들링</h1>
