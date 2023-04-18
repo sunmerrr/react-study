@@ -24,12 +24,38 @@ export class ClassRef extends Component {
 
   inputRef = React.createRef(); // 변수에 createRef()를 담아줌
 
+  // ref를 통해서 scroll event 다루기
+  scrollToBottom = () => {
+    const { scrollHeight, clientHeight } = this.scrollRef;
+    this.scrollRef.scrollTop = scrollHeight - clientHeight;
+  };
+
   render() {
+    const style = {
+      border: '1px solid black',
+      height: '300px',
+      width: '300px',
+      overflow: 'auto',
+      position: 'relative',
+    };
+
+    const innerStyle = {
+      width: '100%',
+      height: '650px',
+      background: 'linear-gradient(white, black)',
+    };
+
     return (
-      <div>
+      <div
+        style={style}
+        ref={(ref) => {
+          this.scrollRef = ref;
+        }}
+      >
+        <div style={innerStyle}></div>
         {/* <input ref={this.inputRef} /> */}
         {/* 선언해준 변수를 ref를 달고자 하는 요소에 props로 넣어줌 */}
-        <input
+        {/* <input
           ref={(ref) => {
             this.inputRef = ref;
           }}
@@ -37,8 +63,8 @@ export class ClassRef extends Component {
           value={this.state.password}
           onChange={this.handleChange}
           className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
-        />
-        <button onClick={this.handleButtonClick}>검증하기</button>
+        /> */}
+        {/* <button onClick={this.handleButtonClick}>검증하기</button> */}
       </div>
     );
   }
