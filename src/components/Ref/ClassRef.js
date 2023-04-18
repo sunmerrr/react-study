@@ -46,16 +46,10 @@ export class ClassRef extends Component {
     };
 
     return (
-      <div
-        style={style}
-        ref={(ref) => {
-          this.scrollRef = ref;
-        }}
-      >
-        <div style={innerStyle}></div>
+      <div>
         {/* <input ref={this.inputRef} /> */}
         {/* 선언해준 변수를 ref를 달고자 하는 요소에 props로 넣어줌 */}
-        {/* <input
+        <input
           ref={(ref) => {
             this.inputRef = ref;
           }}
@@ -63,8 +57,16 @@ export class ClassRef extends Component {
           value={this.state.password}
           onChange={this.handleChange}
           className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
-        /> */}
-        {/* <button onClick={this.handleButtonClick}>검증하기</button> */}
+        />
+        <button onClick={this.handleButtonClick}>검증하기</button>
+        <div
+          style={style}
+          ref={(ref) => {
+            this.scrollRef = ref;
+          }}
+        >
+          <div style={innerStyle}></div>
+        </div>
       </div>
     );
   }
