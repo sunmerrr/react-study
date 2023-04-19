@@ -7,12 +7,17 @@ import FunctionComponentCouter from './components/ComponentBasic/ClassComponentC
 import FunctionComponentSayHi from './components/ComponentBasic/FunctionComponentSayHi';
 import FunctionEvent from './components/Event/FunctionEvent';
 import FunctionRef from './components/Ref/FunctionRef';
+import FunctionMap from './components/Map/FunctionMap';
 
 function FunctionApp() {
   return (
     <div className="App">
       <hr />
       <h1 style={{ color: 'green' }}>---------------Function----------------</h1>
+      <h1>컴포넌트 반복</h1>
+      <FunctionMap />
+
+      <hr />
       <h1>Ref</h1>
       <FunctionRef />
 
