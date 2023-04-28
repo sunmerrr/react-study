@@ -4,12 +4,16 @@ import ClassComponent from './components/ComponentBasic/ClassComponent';
 import ClassComponentCounter from './components/ComponentBasic/ClassComponentCounter';
 import ClassEvent from './components/Event/ClassEvent';
 import ClassRef from './components/Ref/ClassRef';
+import ComponentLifeCycle from './components/LifeCycle/ComponentLifeCycle';
 
 export class ClassApp extends Component {
   render() {
     return (
       <div className="App">
         <h1 style={{ color: 'green' }}>---------------Class----------------</h1>
+        <h1>Life Cycle</h1>
+        <ComponentLifeCycle />
+        <hr />
         <h1>Ref</h1>
         <ClassRef ref={(ref) => (this.scrollBoxRef = ref)} />
         <button
