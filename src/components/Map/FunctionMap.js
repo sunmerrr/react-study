@@ -11,10 +11,10 @@ const FunctionMap = () => {
   const [nextId, setNextId] = useState(5);
 
   const nameList = names.map((name, index) => (
-    <>
-      <li key={name.id}>{name.text}</li>
+    <div key={name.id} style={{ display: 'flex', justifyContent: 'space-between', width: '146px' }}>
+      <li>{name.text}</li>
       <button onClick={() => hanldeDelete(name.id)}>삭제</button>
-    </>
+    </div>
   ));
 
   const handleChange = (e) => setInputText(e.target.value);
