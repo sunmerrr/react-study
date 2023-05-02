@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import ComponentLifeCycle from './ComponentLifeCycle';
+import ErrorBoundary from './ErrorBoundary';
 
 function getRandomColor() {
   // 16777215 값은 hex로 ffffff 값임. 즉, 000000 ~ ffffff 까지 값을 반환하게 됨 (182p)
@@ -21,7 +22,13 @@ export class LifeCycleContainer extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>랜덤 색상</button>
-        <ComponentLifeCycle color={this.state.color} />
+        <ErrorBoundary>
+          <ComponentLifeCycle color={this.state.color} />
+        </ErrorBoundary>
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     );
   }
