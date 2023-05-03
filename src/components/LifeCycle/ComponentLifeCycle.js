@@ -21,8 +21,8 @@ export class ComponentLifeCycle extends Component {
     return null;
   }
 
-  conponentDidMount() {
-    console.log('conponentDidMount');
+  componentDidMount() {
+    console.log('componentDidMount');
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -56,7 +56,7 @@ export class ComponentLifeCycle extends Component {
   }
 
   render() {
-    console.log('render');
+    console.log('----------render----------');
 
     const style = {
       color: this.props.color,
@@ -64,6 +64,7 @@ export class ComponentLifeCycle extends Component {
 
     return (
       <div>
+        {this.props.missing.value}
         <h1 style={style} ref={(ref) => (this.myRef = ref)}>
           {this.state.number}
         </h1>
