@@ -13,6 +13,8 @@ export class LifeCycleContainer extends Component {
   };
 
   handleClick = () => {
+    console.log('click color update button');
+
     this.setState({
       color: getRandomColor(),
     });

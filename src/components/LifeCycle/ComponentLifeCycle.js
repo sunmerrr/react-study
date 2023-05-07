@@ -14,7 +14,7 @@ export class ComponentLifeCycle extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('getDerivedStateFromProps');
+    console.log('getDerivedStateFromProps --> ', 'nextProps: ', nextProps, 'prevState: ', prevState);
     if (nextProps !== prevState) {
       return { color: nextProps.color };
     }
@@ -26,7 +26,7 @@ export class ComponentLifeCycle extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate', nextProps, nextState);
+    console.log('shouldComponentUpdate --> ', 'nextProps: ', nextProps, 'nextState: ', nextState);
     return nextState.number % 10 !== 4;
   }
 
@@ -35,13 +35,15 @@ export class ComponentLifeCycle extends Component {
   }
 
   handleClick = () => {
+    // eslint-disable-next-line no-undef
+    console.log('click number update button');
     this.setState({
       number: this.state.number + 1,
     });
   };
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log('getSnapshotBeforeUpdate');
+    console.log('getSnapshotBeforeUpdate --> ', 'prevProps: ', prevProps, 'prevState: ', prevState);
     if (prevProps.color !== this.props.color) {
       return this.myRef.style.color;
     }
@@ -49,9 +51,9 @@ export class ComponentLifeCycle extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log('componentDidUpdate', prevProps, prevState);
+    console.log('componentDidUpdate --> ', 'prevProps: ', prevProps, 'prevState: ', prevState);
     if (snapshot) {
-      console.log('color before updated', snapshot);
+      console.log('color before updated --> ', 'snapshot: ', snapshot);
     }
   }
 
@@ -64,7 +66,7 @@ export class ComponentLifeCycle extends Component {
 
     return (
       <div>
-        {this.props.missing.value}
+        {/* {this.props.missing.value} */}
         <h1 style={style} ref={(ref) => (this.myRef = ref)}>
           {this.state.number}
         </h1>
