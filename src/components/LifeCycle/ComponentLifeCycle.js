@@ -35,7 +35,6 @@ export class ComponentLifeCycle extends Component {
   }
 
   handleClick = () => {
-    // eslint-disable-next-line no-undef
     console.log('click number update button');
     this.setState({
       number: this.state.number + 1,
