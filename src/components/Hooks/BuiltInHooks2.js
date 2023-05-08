@@ -6,7 +6,11 @@ const BuiltInHooks2 = () => {
 
   useEffect(() => {
     console.log('렌더링이 완료되었습니다.');
-    console.log('name', name, 'nickname', nickname);
+    // console.log('name', name, 'nickname', nickname);
+    return () => {
+      console.log('clean up');
+      console.log(name);
+    };
   }, [name]);
 
   const handleChangeName = (e) => {
