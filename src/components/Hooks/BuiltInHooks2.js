@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const BuiltInHooks2 = () => {
   const [name, setName] = useState('');
   const [nickname, setNickname] = useState('');
+
+  useEffect(() => {
+    console.log('렌더링이 완료되었습니다.');
+    console.log('name', name, 'nickname', nickname);
+  }, [name]);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
