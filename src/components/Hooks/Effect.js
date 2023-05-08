@@ -11,7 +11,7 @@ const BuiltInHooks2 = () => {
       console.log('clean up');
       console.log(name);
     };
-  }, [name]);
+  }, []);
 
   const handleChangeName = (e) => {
     setName(e.target.value);

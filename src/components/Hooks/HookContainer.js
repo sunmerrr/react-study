@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import BuiltInHooks2 from './BuiltInHooks2';
+import BuiltInHooks2 from './Effect';
 
 const HookContainer = () => {
   const [visible, setVisible] = useState(true);
