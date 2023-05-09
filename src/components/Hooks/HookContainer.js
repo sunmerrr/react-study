@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import BuiltInHooks2 from './Effect';
+import Effect from './Effect';
 
 const HookContainer = () => {
   const [visible, setVisible] = useState(true);
+
   return (
     <div>
       <button
@@ -12,7 +13,7 @@ const HookContainer = () => {
       >
         {visible ? '숨기기' : '보이기'}
       </button>
-      {visible && <BuiltInHooks2 />}
+      {visible && <Effect />}
     </div>
   );
 };
