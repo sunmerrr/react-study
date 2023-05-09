@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const BuiltInHooks = () => {
+const State = () => {
   const [number, setNumber] = useState(0);
 
   return (
@@ -17,4 +17,4 @@ const BuiltInHooks = () => {
   );
 };
 
-export default BuiltInHooks;
+export default State;
