@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const BuiltInHooks2 = () => {
+const Effect = () => {
   const [name, setName] = useState('');
   const [nickname, setNickname] = useState('');
 
@@ -35,4 +35,4 @@ const BuiltInHooks2 = () => {
   );
 };
 
-export default BuiltInHooks2;
+export default Effect;
