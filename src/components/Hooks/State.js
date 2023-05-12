@@ -1,7 +1,12 @@
 import { useState } from 'react';
 
+const testFuntion = () => {
+  console.log('initialize state');
+  return '';
+};
 const State = () => {
   const [number, setNumber] = useState(0);
+  const [test, setTest] = useState(testFuntion);
 
   return (
     <div>
