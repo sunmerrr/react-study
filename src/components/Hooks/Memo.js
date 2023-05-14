@@ -1,9 +1,13 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import MemoAverage from './MemoAverage';
 
 function Memo() {
   const [list, setList] = useState([]);
   const [number, setNumber] = useState('');
+
+  useEffect(() => {
+    console.log('초기 렌더링 완료');
+  }, []);
 
   const handleChange = (e) => {
     setNumber(e.target.value);
