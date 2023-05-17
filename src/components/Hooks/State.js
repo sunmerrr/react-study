@@ -4,9 +4,9 @@ const State = () => {
   const [number, setNumber] = useState(0);
 
   const handleClick = () => {
-    setNumber(number + 1);
-    setNumber(number + 1);
-    setNumber(number + 1);
+    setNumber((number) => number + 1);
+    setNumber((number) => number + 1);
+    setNumber((number) => number + 1);
     console.log('set 함수를 호출 시 함께 호출되는 콘솔 로그', number);
   };
 
