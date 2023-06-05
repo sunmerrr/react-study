@@ -1,37 +1,35 @@
 import { useState, useEffect } from 'react';
 
 const Effect = () => {
-  const [name, setName] = useState('');
-  const [nickname, setNickname] = useState('');
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    console.log('렌더링이 완료되었습니다.');
-    // console.log('name', name, 'nickname', nickname);
+    const handlemove = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+      console.log('e.clientX: ', e.clientX, 'e.clientY: ', e.clientY);
+    };
+
+    window.addEventListener('pointermove', handlemove);
     return () => {
-      console.log('clean up');
-      console.log(name);
+      window.removeEventListener('pointermove', handlemove);
     };
   }, []);
 
-  const handleChangeName = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleChangeNickname = (e) => {
-    setNickname(e.target.value);
-  };
-
   return (
-    <div>
-      <input onChange={handleChangeName} type="text" placeholder="name" value={name} name="name" />
-      <input onChange={handleChangeNickname} type="text" placeholder="nickname" value={nickname} name="nickname" />
-      <p>
-        이름: <b>{name}</b>
-      </p>
-      <p>
-        닉네임: <b>{nickname}</b>
-      </p>
-    </div>
+    <div
+      style={{
+        position: 'absolute',
+        backgroundColor: 'pink',
+        borderRadius: '50%',
+        opacity: 0.6,
+        transform: `translate(${position.x}px, ${position.y}px)`,
+        pointerEvents: 'none',
+        left: -20,
+        top: -20,
+        width: 40,
+        height: 40,
+      }}
+    ></div>
   );
 };
 
