@@ -6,14 +6,14 @@ const serverUrl = 'https://localhost:3000';
 export function ChatRoom({ roomId }) {
   const [message, setMessage] = useState('');
 
-  const options = () => {
-    return {
-      serverUrl,
-      roomId,
-    };
-  };
-
   useEffect(() => {
+    const options = () => {
+      return {
+        serverUrl,
+        roomId,
+      };
+    };
+
     const connection = createConnection(options);
     connection.connect();
     return () => {
