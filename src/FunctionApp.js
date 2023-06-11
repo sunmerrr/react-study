@@ -10,6 +10,8 @@ import HookContainer from './components/Hooks/HookContainer';
 import ReducerCounter from './components/Hooks/ReducerCounter';
 import ReducerInfo from './components/Hooks/ReducerInfo';
 import Memo from './components/Hooks/Memo';
+import Ref from './components/Hooks/Ref';
+import Effect from './components/Hooks/Effect';
 
 function FunctionApp() {
   return (
@@ -18,10 +20,11 @@ function FunctionApp() {
       <h1 style={{ color: 'green' }}>---------------Function----------------</h1>
       <h1>Built-in Hooks</h1>
       <State />
-      <HookContainer />
+      <Effect />
       <ReducerCounter />
       <ReducerInfo />
       <Memo />
+      <Ref />
       <br />
       <br />
       <br />
