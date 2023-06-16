@@ -54,7 +54,7 @@ function VideoZoomInOut() {
           src="/sample_summer.mp4"
           style={canZoomStyle(scrollY, scrollDirection, scale)}
           ref={iframeRef}
-          allow="autoplay;"
+          allow="autoplay"
           onWheel={handleWheelEvent}
         ></iframe>
       </div>
