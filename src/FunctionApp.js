@@ -12,10 +12,13 @@ import ReducerInfo from './components/Hooks/ReducerInfo';
 import Memo from './components/Hooks/Memo';
 import Ref from './components/Hooks/Ref';
 import Effect from './components/Hooks/Effect';
+import VideoZoomInOut from './components/Oters/VideoZoomInOut';
 
 function FunctionApp() {
   return (
     <div className="App">
+      <VideoZoomInOut />
+
       <hr />
       <h1 style={{ color: 'green' }}>---------------Function----------------</h1>
       <h1>Built-in Hooks</h1>
